@@ -24,7 +24,7 @@ namespace FreeCourse.IdentityServer.Services
             if (existUser==null)
             {
                 var errors = new Dictionary<string, object>();
-                errors.Add("error", new List<string> { "Entered email or password is wrong!" });
+                errors.Add("errors", new List<string> { "Entered email or password is wrong!" });
                 context.Result.CustomResponse = errors;
                 return;
             }
@@ -33,7 +33,7 @@ namespace FreeCourse.IdentityServer.Services
             if (passWordCheck ==false)
             {
                 var errors = new Dictionary<string, object>();
-                errors.Add("error", new List<string> { "Entered email or password is wrong!" });
+                errors.Add("errors", new List<string> { "Entered email or password is wrong!" });
                 context.Result.CustomResponse = errors;
                 return;
             }
